@@ -1,0 +1,219 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f0f2f5;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fac4f1;
+  color: #333; /* Cor do texto padrão */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.login-box {
+  background: white;
+  padding: 40px 60px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  max-width: 90%;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.5rem; /* Fonte maior */
+  margin-bottom: 1.5rem;
+  color: #d5006f; /* Tom rosa mais visível */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.input-div {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-div input {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 1.1rem; /* Aumento da fonte */
+  border: 1px solid #ccd0d5;
+  border-radius: 6px;
+  outline: none;
+  color: #333; /* Cor do texto nos campos de entrada */
+}
+
+.input-div input:focus {
+  border-color: #d5006f; /* Cor rosa no foco */
+  box-shadow: 0 0 0 1px #d5006f;
+}
+
+.btn {
+  background-color: #d5006f; /* Cor rosa */
+  color: white;
+  border: none;
+  padding: 14px;
+  font-size: 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background-color: #a40056; /* Tom mais escuro de rosa no hover */
+}
+
+a {
+  display: block;
+  margin-top: 20px;
+  color: #d5006f; /* Cor rosa para o link */
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Animações e ajustes finos */
+
+/* Animação para os campos de input */
+.input-div input {
+  transition: all 0.3s ease;
+}
+
+.input-div input:focus {
+  transform: scale(1.05);
+}
+
+/* Ajustando o botão para um efeito de suavidade */
+.btn {
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #a40056; /* Cor mais escura de rosa */
+}
+
+/* Suavizando a animação de transição dos links */
+a {
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #a40056; /* Tom de rosa mais escuro */
+}
+
+/* Responsividade */
+
+/* Para telas pequenas (smartphones) */
+@media (max-width: 768px) {
+  .login-box {
+    padding: 30px 40px;
+    width: 90%;
+  }
+
+  h2 {
+    font-size: 2rem; /* Reduzindo o tamanho do título */
+  }
+
+  .input-div input {
+    font-size: 1rem; /* Reduzindo o tamanho da fonte nos campos de entrada */
+  }
+
+  .btn {
+    font-size: 1rem; /* Ajustando o tamanho da fonte do botão */
+    padding: 12px;
+  }
+}
+
+/* Para telas extra pequenas (smartphones em modo retrato) */
+@media (max-width: 480px) {
+  body {
+    background-image: linear-gradient(to right, #ffb3c6, #f9d7e0, #f9d7e0); /* Ajustando o fundo */
+  }
+
+  .login-box {
+    padding: 20px 30px;
+    width: 90%;
+  }
+
+  h2 {
+    font-size: 1.8rem; /* Font menor em telas pequenas */
+  }
+
+  .input-div input {
+    font-size: 0.9rem; /* Font menor nos campos de entrada */
+  }
+
+  .btn {
+    font-size: 1rem; /* Ajustando o tamanho do botão */
+    padding: 12px;
+  }
+
+  a {
+    font-size: 0.9rem; /* Reduzindo o tamanho da fonte do link */
+  }
+}
+
+/* Para telas de BlackBerry (telas muito pequenas, até 320px) */
+@media (max-width: 320px) {
+  .login-box {
+    padding: 15px 20px;
+    width: 95%;
+  }
+
+  h2 {
+    font-size: 1.5rem; /* Font menor para BlackBerry */
+  }
+
+  .input-div input {
+    font-size: 0.8rem; /* Font menor nos campos de entrada */
+  }
+
+  .btn {
+    font-size: 0.9rem; /* Botão menor para BlackBerry */
+    padding: 10px;
+  }
+
+  a {
+    font-size: 0.8rem; /* Reduzindo o tamanho da fonte do link */
+  }
+}
+
+/* Para telas muito grandes */
+@media (min-width: 1200px) {
+  .login-box {
+    width: 450px; /* Ajuste para telas grandes */
+  }
+
+  h2 {
+    font-size: 3rem; /* Font maior em telas grandes */
+  }
+
+  .input-div input {
+    font-size: 1.2rem; /* Aumento da fonte para entradas */
+  }
+
+  .btn {
+    font-size: 1.3rem; /* Botão maior em telas grandes */
+  }
+}

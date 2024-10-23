@@ -1,0 +1,52 @@
+/* Estilos gerais para as flores animadas */
+.flower {
+  position: absolute;
+  top: -10%; /* Começa fora da tela, acima */
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.7;
+  animation: fall linear infinite; /* Animação contínua de queda */
+  pointer-events: none; /* As flores não interferem em cliques na página */
+}
+
+/* Keyframes para animar a queda das flores */
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg); /* Começa a queda */
+    opacity: 1; /* Inicia totalmente visível */
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg); /* Termina fora da tela */
+    opacity: 0; /* Desaparece ao final da queda */
+  }
+}
+
+/* Estilos específicos para diferentes flores (velocidade, posição) */
+.flower:nth-child(1) { left: 5%; animation-duration: 9s; }
+.flower:nth-child(2) { left: 20%; animation-duration: 12s; }
+.flower:nth-child(3) { left: 35%; animation-duration: 10s; }
+.flower:nth-child(4) { left: 50%; animation-duration: 9s; }
+.flower:nth-child(5) { left: 65%; animation-duration: 13s; }
+.flower:nth-child(6) { left: 80%; animation-duration: 11s; }
+.flower:nth-child(7) { left: 90%; animation-duration: 14s; }
+.flower:nth-child(8) { left: 15%; animation-duration: 10.5s; }
+.flower:nth-child(9) { left: 45%; animation-duration: 11.5s; }
+.flower:nth-child(10) { left: 75%; animation-duration: 13.5s; }
+
+/* Ajustes para telas menores (responsividade) */
+@media (max-width: 768px) {
+  .flower {
+    width: 30px; /* Reduz o tamanho das flores em telas menores */
+    height: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .flower {
+    width: 20px; /* Reduz ainda mais em telas bem pequenas */
+    height: 20px;
+  }
+}
